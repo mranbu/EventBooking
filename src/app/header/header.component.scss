@@ -1,21 +1,15 @@
-#navbar{
-    position: sticky;
-    top:0%;
-    left: 0%;
-    
-    padding: .5rem 5rem;
-    box-shadow: 5px 5px 20px rgba(22, 21, 21, 0.5);
-    background-color:black;
-}
-.navbar .navbar-brand{
-    font-size: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     color: greenyellow !important;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Carrois+Gothic+SC&family=Megrim&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*{
+    font-style:"Poppins", serif;
+    font-size: 18px; 
 }
-#navbarSupportedContent a{
-     color:white;
+.navbar{
+    background-color:rgba(255,255,255,0.1);
+    position: relative;
+    
 }
-.navbardropdown{
-     color: black;
+.navbar-nav.nav-link{
+    font-weight: 300px;
+    color: black !important;
 }
