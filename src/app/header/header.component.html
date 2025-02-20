@@ -1,8 +1,8 @@
 
-    <nav class="navbar navbar-expand-lg navbar-dark " id="navbar">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg  bg-dark" id="navbar">
+        <div class="container-fluid">
           <a class="navbar-brand fw-bold" href="#" style="color: #81b8df;">Event Booking</a>
-          <span> <a class="nav-link profile" href="./profile.html"><i class="ri-contacts-fill pe-2"></i>Profile</a></span>
+          <span> <a class="nav-link profile" [routerLink]="['profile']"><i class="ri-contacts-fill pe-2"></i>Profile</a></span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"  aria-expanded="false" >
             <span class="navbar-toggler-icon"></span>
           </button> 
@@ -10,22 +10,20 @@
             <ul class="navbar-nav mx-auto ">
               
               <li class="nav-item">
-                <a class="nav-link" href="#home"> Home</a>
+                <a class="nav-link" href="#"> Home</a>
               </li>
               <li class="nav-item">
                 <a [routerLink]="['gallery']"class="nav-link" >Gallery</a>
               </li>
               <li class="nav-item">
-                <a [routerLink]="['combos']"class="nav-link" >Combos</a>
+                <a [routerLink]="['event-types']"class="nav-link" >Even-types</a>
               </li>
               <li  ngbDropdown class="d-inline-block ">
-                <a class="more" id="dropdownBasic1" ngbDropdownToggle>
+                <a class="more " id="dropdownBasic1" ngbDropdownToggle>
                   More
                 </a>
                 <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                  <li class="nav-item">
-                    <a  ngbDropdownItem >Event Types</a>
-                  </li>
+                 
                   <li class="nav-item">
                     <a  ngbDropdownItem >Event Details</a>
                   </li>
@@ -39,12 +37,17 @@
                     <a  ngbDropdownItem >booking</a>
                   </li>
                 </ul>
-              
+                <li class="nav-item">
+                <a [routerLink]="['aboutus']"class="nav-link" >aboutUS</a>
+              </li>
+              <li class="nav-item">
+                <a [routerLink]="['contactus']"class="nav-link" >contactUs</a>
+              </li>
 
             </ul>
             <form class="d-flex">
-              <span id="lgiBtn"><a href="./login.html" class="btn btn-outline-primary">Login</a></span>                 
-              <span id="lgoBtn"><button class="btn btn-outline-success" type="button">Logout</button></span>
+              <span id="lgiBtn"><button type="button" class="btn-brand  ms-lg-3" (click)="gotologinpage()">Login</button></span>                 
+              <span id="lgoBtn"><button  type="button"  class="btn-brand ms-lg-3" (click)="userlogout()" >Logout</button></span>
           </form>
         </div>
         </div>

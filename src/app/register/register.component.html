@@ -1,23 +1,25 @@
-<div class="container-mt4" id="body">
+<div class="container-fluid" id="body">
+  <div class="row">
   <div class="wrapper">
     <h1>sign Up</h1>
     <form>
         
-        <input type="text" name="userName" placeholder="Username"/>
-        <input type="text" name="pswd" placeholder="Password"/>
-         <input type="text" name="cpswd" placeholder="cpsw"/>
-         <input type="text" name="mobile" placeholder="mobile"/>
-        <input type="text" name="email" placeholder="Email"/>
+        <input type="text" [(ngModel)]="username" placeholder="Username" name="username"/>
+        <input type="text" [(ngModel)]="password" placeholder="Password" name="pswd"/>
+         <input type="text" [(ngModel)]="cfpswd" placeholder="cfpsw" name="cfpswd"/>
+         <input type="number" [(ngModel)]="mobile" placeholder="mobile" name="mob"/>
+        <input type="text" [(ngModel)]="email" placeholder="Email" name="email"/>
+        <button (click)="regacc()">Sign Up</button>
          </form> 
         <div class="terms">
             <input type="checkbox" id="checkbox">
             <label for="checkbox">i agree to these</label>
-            <button>Sign Up</button>
             <div class="member">
-              Already a member?<a href="./login.html">
+              Already a member?<a [routerLink]="['/login']">
                 Login Here
               </a>
             </div>
         </div>
   </div>
+</div>
 </div>

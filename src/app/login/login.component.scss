@@ -5,12 +5,17 @@
     box-sizing: border-box;
     font-style: "poppies",serif;
 }
-.body{
-background:#dfe9f5;
+#body{
+background-color: #07001f;
+width: 100%;
+height: auto;
+overflow: hidden;
 }
- .wrapper{
+.wrapper{
     width: 330px;
-    padding: 2rem 1rem;
+    height: 50%;
+    
+    //padding: 2rem 1rem;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 10px;
@@ -21,6 +26,7 @@ h1{
     font-size: 2rem;
     color: #07001f;
     margin-bottom: 1.2rem;
+    color: white;
 }
 form input{
     width: 92%;

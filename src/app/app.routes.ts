@@ -13,11 +13,13 @@ import { CombosComponent } from './combos/combos.component';
 import { PaymentComponent } from './payment/payment.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { EventTypesComponent } from './event-types/event-types.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
+     {path:'',redirectTo:'home', pathMatch:'full'},
     {path:'header', component:HeaderComponent},
     {path:'footer', component:FooterComponent},
-    {path:'', component:HomeComponent},
+    {path:'home', component:HomeComponent},
     {path:'login', component:LoginComponent},
     {path:'register',component:RegisterComponent},
     {path:'aboutus',component:AboutusComponent},
@@ -28,6 +30,7 @@ export const routes: Routes = [
     {path:'combos',component:CombosComponent},
     {path:'payment',component:PaymentComponent},
     {path:'event-details',component:EventDetailsComponent},
-    {path:'even-types',component:EventTypesComponent}
+    {path: 'profile', component:ProfileComponent},
+    {path:'event-types',component:EventTypesComponent}
 
 ];

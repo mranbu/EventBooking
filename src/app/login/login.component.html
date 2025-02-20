@@ -1,21 +1,28 @@
-<div class="container-mt4" id="body">
-    <div class="wrapper">
-      <h1>Login</h1>
-      <form>
-          
-          <input type="text" name="userName" placeholder="Username"/>
-          <input type="text" name="pswd" placeholder="Password"/>
-           </form> 
-          <div class="terms">
-              <input type="checkbox" id="checkbox">
-              <label for="checkbox">i agree to these</label>
-              <button>Login</button>
-              <div class="member">
-                 Not a member?<a href="./signup.html">
-                  Register Now
-                </a>
-              </div>
-          </div>
-    </div>
+<div class="container-fluid" id="body">
+  {{errmeg}}
+  <div class="row" *ngIf="errmeg">
+    <ngb-alert [dismissible]="true">
+      <strong>Warning!</strong>{{errmeg}}
+    </ngb-alert>
   </div>
-  
+  <div class="wrapper">
+    <h1>Login</h1>
+    <form>
+
+      <input type="text" [(ngModel)]="username" placeholder="Username" name="userName" />
+      <input type="text" [(ngModel)]="password" placeholder="Password" name="password" />
+
+      <div class="terms">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">i agree to these</label>
+        <button type="button" (click)="checkLogin()">Login</button>
+        <div class="member">
+          Not a member?<a [routerLink]="['/register']">
+            Register Now
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

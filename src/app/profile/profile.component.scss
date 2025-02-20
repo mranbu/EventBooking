@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Carrois+Gothic+SC&family=Megrim&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.profile{
+    background:#081b29;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+    }
+     .row{
+        width: 400px;
+        padding: 2rem 1rem;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 20px 35px rbga(0,0,0,0.1);
+    }
+    h1{
+        font-size: 2rem;
+        color: #07001f;
+        margin-bottom: 1.2rem;
+        font-style: "poppies",serif;
+        font-weight: 600;
+    }
+    form input{
+        width: 92%;
+        outline:none;
+        border: 1px solid#fff;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #e4e4e4;
+    }
+    button{
+        margin-top: 10%;
+        padding-right: 5%;
+        border-radius: 20px;
+        border-color: #07001f;
+        color: black !important;
+        font-style: "poppies",serif;
+        font-weight: 500;
+    }
+    

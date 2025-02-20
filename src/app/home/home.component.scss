@@ -1,5 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Carrois+Gothic+SC&family=Megrim&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 #home{
-    background: url(../../assets/imeage/home.1.jpg);
+    background:url(../../assets/imeage/home.2.jpg);
     background-position: center;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+h1{
+    position: relative;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: azure ;
+    font-family: "poppins:ital";
+    font-weight: 800;
+}
+h2{
+    position: relative;
+    text-align: center;
+    top: 25%;
+    color: antiquewhite;
+    font-style:"Poppins",serif;
+    font-weight:500;
+}
+
+p{
+    position: relative;
+    top:35%;
+    color: white;
+    text-align: center;
+    font-style:"Poppins",serif;
+    font-weight:400;
+
 }
