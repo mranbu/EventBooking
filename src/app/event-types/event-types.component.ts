@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { SessionService } from '../service/session.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-event-types',
@@ -12,7 +13,12 @@ import { RouterModule } from '@angular/router';
 })
 export class EventTypesComponent {
 
-  constructor(private sessionService:SessionService){
+  constructor(private sessionService:SessionService, private router:Router ){
     this.sessionService.validateSession();
   }
+
+  goToDetail(){
+    this.router.navigate(['event-deatils'])
+  }
+ 
 }
