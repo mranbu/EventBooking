@@ -36,13 +36,18 @@ export class ProfileComponent implements OnInit {
   getProfileData(){
     this.apiservice.getdata(apiUrls.userApi+"/"+this.sessionservice.getUserId()).subscribe(
       (responseData:any)=>{
-         this.setProfileData(responseData);
+
+        this.dataLoadPandren(responseData);
+         
       },
       err =>{console.log(err);}
     );
 
   }
-setProfileData(responseData:any){
+
+
+
+dataLoadPandren(responseData:any){
   this.profileData.get('username')?.setValue(responseData.username);
   this.profileData.get('mobile')?.setValue(responseData.mobile);
   this.profileData.get('email')?.setValue(responseData.email);

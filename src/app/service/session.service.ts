@@ -17,7 +17,7 @@ export class SessionService {
     }
   }
   getUserId(){
-    return sessionStorage.getItem('UserId') || '';
+    return sessionStorage.getItem('userId') || '';
   }
 
   

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from '../login/login.component';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterConfigOptions, RouterLink, RouterModule } from '@angular/router';
 import { ApiService } from '../service/api.service';
 import { error } from 'console';
 import { apiUrls } from '../constants/globalContants';
@@ -22,7 +22,7 @@ export class RegisterComponent {
   mobile:number=0;
   email:any;
 
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService, private router:Router){}
 
   regacc(){
     let requestbody={
@@ -33,7 +33,9 @@ export class RegisterComponent {
     }
     
     this.api.createdata(apiUrls.userApi, requestbody).subscribe(
-      ()=>{alert('Register succesfully..')},
+      ()=>{alert('Register succesfully..');
+      this.router.navigate(['login']);
+      },
       error=>{console.log(error )}
     );
     

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SessionService } from '../service/session.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule,Router } from '@angular/router';
@@ -11,14 +11,17 @@ import { RouterModule,Router } from '@angular/router';
   templateUrl: './event-types.component.html',
   styleUrl: './event-types.component.scss'
 })
-export class EventTypesComponent {
+export class EventTypesComponent   implements OnInit{
 
-  constructor(private sessionService:SessionService, private router:Router ){
-    this.sessionService.validateSession();
+  constructor(private sessionService:SessionService, private router:Router ){}
+    
+  
+  ngOnInit():void{
+  this.sessionService.validateSession();
   }
 
   goToDetail(){
-    this.router.navigate(['event-deatils'])
+    this.router.navigate(['event-details'])
   }
  
 }
