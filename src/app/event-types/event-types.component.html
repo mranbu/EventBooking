@@ -2,6 +2,10 @@
   <div class="product">
 
   <h1>Event types</h1>
+
+  <div *ngFor="let event of eventtypes;let i=index">
+    {{event.eName}}
+  </div>
   
     <div class="row mt-5">
     <div class="col">
@@ -38,7 +42,7 @@
       <div class="card" style="width: 18rem;">
         <img src="../../assets/imeage/gallery/dj event.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Dj</h5>
+          <h5 class="card-title">Dj music</h5>
           <button type="button" class="btn btn-primary" (click)="goToDetail()">View more</button>
         </div>
       </div>

@@ -17,16 +17,20 @@
 .navbar-nav .nav-link:hover{
     color: #7000f0 !important;
 }
-.more{
+#dropdownBasic1{
     position: relative;
     top: 8px;
     text-decoration: none;
     font-weight: 500;
     color:white!important;
+
+}
+#dropdownBasic1:hover{
+    color: #7000f0 !important;
     cursor: pointer;
 }
-.more:hover{
-    color: #7000f0 !important;
+.nav-item{
+    cursor: pointer;
 }
 
 .profile{

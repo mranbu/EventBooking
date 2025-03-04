@@ -24,6 +24,7 @@ export class SessionService {
 
   setUserSession(userId:string){
     sessionStorage.setItem('userId', userId);
+
   }
 
 

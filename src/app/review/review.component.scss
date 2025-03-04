@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container-fuild{
+    display:flex;
+    height: 100vh;
+}
+
+.rev-section{
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.note{
+    font-size: 1.1rem;
+    color: rgb(150,150,150);
+    font-style: italic;
+}
+
+.reviews{
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.review{
+    margin: 0 1rem;
+    min-width: 300px;
+    flex: 1;
+}

@@ -5,6 +5,7 @@ import { ApiService } from '../service/api.service';
 import { SessionService } from '../service/session.service';
 import { apiUrls } from '../constants/globalContants';
 import { response } from 'express';
+import { subscribe } from 'node:diagnostics_channel';
 
 @Component({
   selector: 'app-profile',
@@ -54,5 +55,20 @@ dataLoadPandren(responseData:any){
   this.profileData.get('password')?.setValue(responseData.password);
 }
 
+upDateData(){
+ let requestbody= {
+    username:this.profileData.get('username')?.value,
+    mobile:this.profileData.get('mobile')?.value,
+    email:this.profileData.get('email')?.value,
+    password:this.profileData.get('password')?.value
+ }
+this.apiservice.updateData(apiUrls.userApi, requestbody,this.sessionservice.getUserId()).subscribe(
+()=>{
+alert('profile updated successfully');
+},
+  err => {console.log(err);}
+);
+
+}
 
 }

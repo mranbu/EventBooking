@@ -1,0 +1,24 @@
+#gallery{
+    background-color: gainsboro;
+   height: auto;
+   width: 100%;
+   background-size: cover;
+   overflow: hidden;
+   position: relative;
+
+  }
+  h1{
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    align-items: center;
+  }
+ 
+  .img{
+    //display: flex;
+  //flex-wrap: wrap;
+  //padding: 10px; 
+    //width: 400px;
+    //height: 300px;
+    
+  }
