@@ -23,4 +23,9 @@ return this.http.post(apiUrl,requestbody);
       
    }
      
+   deleteData( apiUrl:string, dataId:string){
+    apiUrl +='/'+dataId
+    return this.http.delete(apiUrl)
+
+   }
 }

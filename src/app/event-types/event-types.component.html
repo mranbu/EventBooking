@@ -1,13 +1,56 @@
 <div class="container-fuild" id="event">
   <div class="product">
 
-  <h1>Event types</h1>
+    <h1>Event types</h1>
 
-  <div *ngFor="let event of eventtypes;let i=index">
-    {{event.eName}}
+    <!-- 6
+    1 2 3 4 5 6 7 8 9
+    i = 0 -> 0, 3 (0,1,2) -> 0 1 2
+    1 ->
+    2 ->
+    3 -> 3, 6 ( 3, 4, 5) -> Col => 3 4 5
+    4 ->
+    5 ->
+    6 -> 6, 9 (6,7,8) -> Col => 6 7 8
+    7 ->
+    8 ->
+    9 -> -->
+
+  <div *ngFor="let event of eventtypes;let i=index" class="row mt-4" >
+     <ng-container *ngIf="i==0 || i==3">
+      <div *ngFor="let eve of eventtypes.slice(i,i+3);" class="col">
+        <div class="card" style="width: 18rem;">
+          <img src={{eve.thamnilImg}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{eve.eName}}</h5>
+            <button type="button" class="btn btn-primary" (click)="goToDetailEvent('{{}}')">View more</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
-  
-    <div class="row mt-5">
+
+<!-- 
+    <div *ngFor="let event of eventtypes;let i=index" class="row mt-4">
+      <ng-container *ngIf="i==0 || i== 3 ">
+        <div *ngFor="let eve of eventtypes.slice(i,i+3);" class="col">
+         
+          <div class="card" style="width: 18rem;">
+            <img src={{eve.thamnilImg}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{eve.eName}}</h5>
+              <button type="button" class="btn btn-primary" (click)="goToDetail()">View more</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div> -->
+
+
+    
+
+
+      <!-- <div class="row mt-5">
     <div class="col">
       <div class="card" style="width: 18rem;">
         <img src="../../assets/imeage/gallery/birthday event.jpg" class="card-img-top" alt="...">
@@ -35,9 +78,9 @@
         </div>
       </div>
     </div>
-   </div>
+   </div> -->
 
-    <div class="row mt-4 ">
+      <!-- <div class="row mt-4 ">
     <div class="col ml-4">
       <div class="card" style="width: 18rem;">
         <img src="../../assets/imeage/gallery/dj event.jpg" class="card-img-top" alt="...">
@@ -65,7 +108,6 @@
         </div>
       </div>
     </div>
+    </div> -->
   </div>
 </div>
-</div>
-

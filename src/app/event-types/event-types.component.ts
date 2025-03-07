@@ -19,19 +19,17 @@ import { error } from 'console';
 export class EventTypesComponent   implements OnInit{
 
   eventtypes:any;
+  
 
   constructor(private sessionService:SessionService, private router:Router ,private api:ApiService){}
     
-  events=["e1","e2"];
+  
   ngOnInit():void{
   this.sessionService.validateSession();
-  this.getCardData();
-  }
+  
+  }  
 
-  goToDetail(){
-    this.router.navigate(['event-details'])
-  }
-
+  
   /*
 id, eventName, description, services, thumbnailImg, detailImg, price
 
@@ -47,11 +45,17 @@ session -> id -> GET with filter
  
 getCardData(){
    this.api.getdata(apiUrls.eventapi).subscribe(
-    (responseData:any)=>{
-       this.eventtypes=responseData
+    (responseData:any) =>{
+       this.eventtypes=responseData;
     },
     err =>{console.log(err)}
    );
 }
+goToDetailEvent(eId :any){
+  this.sessionService.setProductSession(eId);
+  
+}
+
+
 
 }
