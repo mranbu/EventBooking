@@ -14,6 +14,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { EventTypesComponent } from './event-types/event-types.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminaccountComponent } from './adminaccount/adminaccount.component';
 
 export const routes: Routes = [
      {path:'',redirectTo:'home', pathMatch:'full'},
@@ -31,6 +32,7 @@ export const routes: Routes = [
     {path:'payment',component:PaymentComponent},
     {path:'event-details',component:EventDetailsComponent},
     {path: 'profile', component:ProfileComponent},
-    {path:'event-types',component:EventTypesComponent}
+    {path:'event-types',component:EventTypesComponent},
+    {path:'adminaccount',component:AdminaccountComponent}
 
 ];

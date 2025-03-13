@@ -27,11 +27,16 @@ export class SessionService {
 
   }
 
-  setProductSession(eId : any){
+  seteventSession(eId : any){
     sessionStorage.setItem('eventId', eId);
   }
 
+  geteventId(){
+    return sessionStorage.getItem('eventId')
+  }
 
+
+  
   userlogout(){
     sessionStorage.removeItem('userId');
   }

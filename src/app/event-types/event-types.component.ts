@@ -26,8 +26,14 @@ export class EventTypesComponent   implements OnInit{
   
   ngOnInit():void{
   this.sessionService.validateSession();
+  this.getCardData();
   
   }  
+  goToDetailEvent(eId:string){
+    this.sessionService.seteventSession(eId);
+   this.router.navigate(['event-details'])
+    
+  }
 
   
   /*
@@ -51,10 +57,7 @@ getCardData(){
     err =>{console.log(err)}
    );
 }
-goToDetailEvent(eId :any){
-  this.sessionService.setProductSession(eId);
-  
-}
+
 
 
 

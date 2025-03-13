@@ -1,0 +1,28 @@
+<h1>Admin account</h1>
+<div class="container-fuild">
+    <h2>message user</h2>
+    <table class="table  table-borderd mt-5">
+
+        <thead>
+            
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let mesg of meg">
+            <td>{{mesg.id}}</td>
+            <td>{{mesg.name}}</td>
+            <td>{{mesg.email}}</td>
+            <td>{{mesg.mess}}</td>
+            <td><button type="button" class="btn btn-danger" (click)="delatemeg(mesg)">Delate</button></td>
+        </tr>
+    </tbody>
+
+    </table>
+
+</div>

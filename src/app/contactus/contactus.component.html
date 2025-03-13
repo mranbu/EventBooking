@@ -1,1 +1,15 @@
-<p>contactus works!</p>
+<div class="container-fuild" id="body">
+    <div class="row">
+        <div class="wrapper">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text"  [(ngModel)]="name" placeholder="Enter the name" name="name" id="name" />
+                <input type="text"    [(ngModel)]="email" placeholder="Enter the email" name="email" id="email" />
+                <textarea type="text"    [(ngModel)]="mess" placeholder="Enter the Message" name="message" id="message"></textarea>
+                <div class="terms">
+                    <button type="button" (click)="messAcc()">Sumit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

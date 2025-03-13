@@ -13,7 +13,7 @@ export class ApiService {
    return this.http.get(apiUrl);
   }
 
-  createdata(apiUrl:string, requestbody:any){
+  createdata(apiUrl: string, requestbody: any){
 return this.http.post(apiUrl,requestbody);
   }
  

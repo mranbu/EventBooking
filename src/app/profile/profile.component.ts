@@ -25,6 +25,7 @@ export class ProfileComponent implements OnInit {
 }
   );
 
+  show:boolean=false;
 
   constructor(private apiservice:ApiService, private sessionservice:SessionService){
     this.sessionservice.validateSession();

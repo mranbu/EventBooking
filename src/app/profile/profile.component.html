@@ -8,11 +8,11 @@
                   <input type="text" placeholder="Username"  formControlName="username"/>
                   <input type="number" placeholder="mobile" formControlName="mobile"/>
                   <input type="text" placeholder="email" formControlName="email"/>
-                  <input type="text"placeholder="Password"  formControlName="password"/>
+                  <input *ngIf="show" type="text"placeholder="Password"  formControlName="password"/>
                </form> 
             
                 <div class="button">
-                     <button type="button" class="btn btn-success">Sensitive Data</button>
+                     <button type="button" class="btn btn-success" (click)="show = !show">Sensitive Data</button>
                      <button type="button" class="btn btn-warning" (click)="upDateData()">Update</button>
                      <button type="button" class="btn btn-danger">Cancel</button>
                 </div>

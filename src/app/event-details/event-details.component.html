@@ -1,26 +1,24 @@
 <div class="container-fuild" id="detail">
+    <!-- {{eventDetail}}
+    <br>
+    {{eventDetail.id}} -->
     <div class="row mt-4">
         <div class="col">
-            <img  class="screen" src="../../assets/imeage/detail/engagement.img"/>
+            <img  class="screen" src= {{eventDetail.detailImg}}/>
         </div>
         <div class="col">
-            <h1>Engagement</h1>
-            <p class="mt-4">Refine your engagement party theme, find an engagement party venu and start discussing the logisty. create your engagement..</p>
+            <h1>{{eventDetail.eName}}</h1>
+            <p class="mt-4">{{eventDetail.descriptaion}}</p>
             <strong>Our Serives</strong>
             <ul>
-                <li>Invention</li>
-                <li>mackeup</li>
-                <li>Stage Decraction</li>
-                <li>catring</li>
-                <li>photography</li>
-            
+                {{eventDetail.service}}
 
             </ul>
-             <h2>price:$2.5lak</h2>
-            <button type="button"  class="btn btn-primary">Book Now</button>
+             <h2>{{eventDetail.price}}</h2>
+            <button type="button"  class="btn btn-primary" (click)="goToBookPage(eventDetail.eid)">Book Now</button>
         </div>
     </div>
-    
+<!--     
     <div class=" box1 row mt-4">
         <div class="col">
             <h1>Wedding</h1>
@@ -92,13 +90,13 @@
             <button type="button"  class="btn btn-primary">Book Now</button>
         </div>
         <div class="col">
-            <img  class="screen"src="../../assets/imeage/detail/dj event.webp"/>
+            <img  class="screen" src="../../assets/imeage/detail/dj event img.jpg"/>
         </div>
     </div>
 
     <div class=" box4 row mt-4">
         <div class="col">
-            <img class="screen" src="../../assets/imeage/detail/decraction img.jpeg"/>
+            <img class="screen" src="../../assets/imeage/detail/deg detail.jpeg"/>
         </div>
         <div class="col">
             <h1>Decraction</h1>
@@ -142,5 +140,5 @@
         <div class="col">
            <img src="../../assets/imeage/detail/photos img.png"/>
         </div>
-    </div>
+    </div> -->
 </div>
